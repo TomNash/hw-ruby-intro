@@ -14,8 +14,8 @@ end
 
 def sum_to_n? arr, n
   found = false
-  arr[0..arr.length-1].each_with_index { |x,i1|
-    arr[i1+1..arr.length].each_with_index { |y,i2|
+  arr[0..arr.length-2].each_with_index { |x,i1|
+    arr[i1+1..arr.length-1].each_with_index { |y,i2|
       found = found ? found : x + y == n
     }
   }
